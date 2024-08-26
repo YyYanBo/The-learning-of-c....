@@ -70,7 +70,30 @@ void SlCheckcapcity(SeqList* ps)
 	 ps -> arr[0] = data;
 	 ps->size++;
  }
-
+ //在指定位置向前插入数据
+ void SeqListInsert(SeqList* ps, int pos, SLTypedata data) 
+ {
+	 assert(ps);//可以用if语句
+	 assert(pos >= 0 && pos <= ps->size);
+	 SlCheckcapcity(ps);
+	 for (int i = ps->size;i>pos; i--)//让pos及以后的数据整体往后移动一位，此处只能从后往前移动
+	 {
+		 ps->arr[i] = ps->arr[i - 1];
+	 }
+	 ps->arr[pos] = data;//赋值
+	 ps->size++;
+ }
+ //在指定位置删除数据
+ void SeqListErase(SeqList* ps, int pos)
+ {
+	 assert(ps);//可以用if语句
+	 assert(pos >= 0 && pos < ps->size);
+	 for (int i = pos; i < ps->size - 1; i++)
+	 {
+		 ps->arr[i] = ps->arr[i + 1];//让pos及以后的数据整体往前移动一位，此处只能从前往后移动
+	 }
+	 ps->size--;
+ }
 
 
 

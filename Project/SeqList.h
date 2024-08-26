@@ -19,16 +19,16 @@ typedef struct SeqList {
 
 void SlCheckcapcity(SeqList* ps);//检验顺序表空间是否足够
 
-void SeqList_Init(SeqList* SL);//顺序表的初始化
-void SeqList_Des(SeqList* SL);//顺序表的销毁
+void SeqList_Init(SeqList* ps);//顺序表的初始化
+void SeqList_Des(SeqList* ps);//顺序表的销毁
 
 
 
 
-void SeqListPB(SeqList* SL,SLTypedata data);//顺序表的尾插
-
-void SeqListPF(SeqList* SL);//顺序表的头插
-
+void SeqListPB(SeqList* ps,SLTypedata data);//顺序表的尾插
+void SeqListPF(SeqList* ps, SLTypedata data);//顺序表的头插
+void SeqListInsert(SeqList* ps, int pos, SLTypedata data);//在指定位置向前插入数据
+void SeqListErase(SeqList* ps, int pos);//在指定位置删除数据
 
 
 

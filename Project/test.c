@@ -17,8 +17,14 @@ void Test01()
 	SeqListPF(&SL, 56);
 	SeqList_Print(SL);
 	SeqListPopBack(&SL);
-
-
+	SeqList_Print(SL);
+	SeqListErase(&SL, 0);
+	SeqList_Print(SL);
+	SeqListErase(&SL, 1);
+	SeqList_Print(SL);
+	SeqListInsert(&SL, 1, 2);
+	SeqList_Print(SL);
+	SeqListInsert(&SL, 0, 789);
 	SeqList_Print(SL);
 	SeqList_Des(&SL);
 
